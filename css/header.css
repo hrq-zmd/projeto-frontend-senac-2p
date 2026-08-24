@@ -39,12 +39,10 @@
 
 /* Menu fechado */
 .menu {
-  display: none;
-
+  display: flex;
   flex-direction: column;
 
   position: absolute;
-
   top: 100%;
   right: 20px;
 
@@ -59,11 +57,27 @@
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
 
   z-index: 1000;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-10px);
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
 }
 
-/* Menu aberto */
 .menu.ativo {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+
+  pointer-events: auto;
 }
 
 .menu a {

@@ -13,7 +13,9 @@
   flex: 0 0 320px;
 
   background-color: var(--quaternary-color);
+
   padding: 20px;
+
   border-radius: 12px;
 }
 
@@ -22,7 +24,9 @@
   min-width: 0;
 }
 
-/* Buscar */
+
+/*    BUSCA
+*/
 
 .side_search {
   margin-bottom: 20px;
@@ -30,19 +34,24 @@
 
 .side_search h2 {
   margin-bottom: 12px;
+
   color: var(--secondary-color);
 }
 
 .side_search form {
   display: flex;
+
   gap: 8px;
 }
 
 .side_search input[type="search"] {
   flex: 1;
+
   padding: 10px;
+
   border: 1px solid var(--border-color);
   border-radius: 6px;
+
   outline: none;
 }
 
@@ -53,9 +62,12 @@
 .side_search button {
   background-color: var(--secondary-color);
   color: var(--text-secondary-color);
+
   border: none;
   border-radius: 6px;
+
   padding: 10px 14px;
+
   cursor: pointer;
 }
 
@@ -63,7 +75,9 @@
   background-color: #162d6b;
 }
 
-/* Menu de departamentos */
+
+/*    MENU DE DEPARTAMENTOS
+*/
 
 .department_menu {
   margin-top: 10px;
@@ -83,7 +97,9 @@
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Título de cada setor */
+
+/*    TÍTULO DOS DEPARTAMENTOS
+*/
 
 .department_title {
   background-color: var(--terciary-color);
@@ -100,24 +116,46 @@
   cursor: pointer;
 }
 
-/* Lista principal de cada setor */
 
-.department_list {
-  display: none;
+/*    CONFIGURAÇÃO GERAL
+   DAS LISTAS
+*/
 
+.department_menu ul {
   margin: 0;
   padding: 0;
 
-  list-style-type: none;
+  list-style: none;
+}
+
+
+/*    LISTA PRINCIPAL
+   DE CADA DEPARTAMENTO
+*/
+
+.department_list {
+  max-height: 0;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease;
 }
 
 .department_list.ativo {
-  display: block;
+  max-height: 1000px;
+
+  opacity: 1;
 }
 
-/* Itens */
 
-.department_menu li {
+/*    ITENS PRINCIPAIS
+*/
+
+.department_list > li {
   background-color: var(--menu-dark-color);
 
   padding: 9px 12px;
@@ -127,37 +165,76 @@
   transition: 0.2s;
 }
 
-.department_menu li:hover {
+.department_list > li:hover {
   background-color: #475569;
 }
+
+
+/*    LINKS
+*/
 
 .department_menu a {
+  display: block;
+
   color: var(--text-secondary-color);
+
   text-decoration: none;
-
-  display: block;
 }
 
-/* Sublistas internas */
 
-.department_menu li ul {
-  display: none;
+/*    SUBCATEGORIAS
+   Hortifrúti, Padaria etc.
+*/
 
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
+.department_subcategory {
+  cursor: pointer;
 }
 
-.department_menu li:hover > ul {
-  display: block;
+
+/*    LISTAS INTERNAS
+   Frutas, Legumes etc.
+*/
+
+.department_subcategory_list {
+  max-height: 0;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  transition:
+    max-height 0.35s ease,
+    opacity 0.25s ease;
 }
 
-.department_menu li ul li {
+.department_subcategory_list.ativo {
+  max-height: 500px;
+
+  opacity: 1;
+}
+
+
+/*    ITENS DAS SUBLISTAS
+*/
+
+.department_subcategory_list li {
   background-color: #475569;
-  padding-left: 25px;
+
+  padding: 8px 10px 8px 25px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.department_menu li ul li:hover {
+
+/* Hover dos itens internos */
+.department_subcategory_list li:hover {
   background-color: #64748b;
+}
+
+
+/*    LINKS DAS SUBLISTAS
+*/
+
+.department_subcategory_list a {
+  font-size: 14px;
 }
