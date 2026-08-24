@@ -22,7 +22,8 @@
   min-width: 0;
 }
 
-/*Buscar*/
+/* Buscar */
+
 .side_search {
   margin-bottom: 20px;
 }
@@ -62,57 +63,96 @@
   background-color: #162d6b;
 }
 
-/*department_menu*/
+/* Menu de departamentos */
+
 .department_menu {
-  clear: left;
   margin-top: 10px;
   margin-bottom: 10px;
-  box-sizing: border-box;
 }
+
 .department_menu h2 {
   background-color: var(--secondary-color);
   color: var(--text-secondary-color);
+
   padding: 18px;
+
   border-radius: 8px;
+
   margin-bottom: 20px;
+
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
-.department_menu h3 {
+
+/* Título de cada setor */
+
+.department_title {
   background-color: var(--terciary-color);
   color: var(--text-secondary-color);
+
   padding: 16px 18px;
+
   border-radius: 8px 8px 0 0;
+
   margin-top: 12px;
+
   font-size: 16px;
+
+  cursor: pointer;
 }
-.department_menu ul {
+
+/* Lista principal de cada setor */
+
+.department_list {
+  display: none;
+
   margin: 0;
   padding: 0;
+
   list-style-type: none;
-  box-sizing: border-box;
 }
+
+.department_list.ativo {
+  display: block;
+}
+
+/* Itens */
 
 .department_menu li {
   background-color: var(--menu-dark-color);
+
   padding: 9px 12px;
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
   transition: 0.2s;
 }
+
 .department_menu li:hover {
   background-color: #475569;
 }
+
 .department_menu a {
   color: var(--text-secondary-color);
   text-decoration: none;
+
   display: block;
 }
+
+/* Sublistas internas */
+
 .department_menu li ul {
   display: none;
-  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
-.department_menu li:hover ul {
+
+.department_menu li:hover > ul {
   display: block;
 }
+
 .department_menu li ul li {
   background-color: #475569;
   padding-left: 25px;

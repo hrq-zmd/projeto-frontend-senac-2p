@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compre em nosso supermercado</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/header.js" defer></script>
+    <script src="js/sidebar.js" defer></script>
 </head>
+
+
 
 <body>
     <header class="header">
@@ -23,14 +27,7 @@
             <a href="#">Ajuda</a>
         </nav>
     </header>
-    <script>
-        const toggleBtn = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('.menu');
-
-        toggleBtn.addEventListener('click', () => {
-            menu.classList.toggle('ativo');
-        });
-    </script>
+ 
 
     <div class="main_container">
         <div class="side">
@@ -45,8 +42,8 @@
             <section class="department_menu">
                 <h2>Departamentos</h2>
                 <nav>
-                    <h3>Setor de Alimentos Frescos</h3>
-                    <ul>
+                    <h3 class="department_title">Setor de Alimentos Frescos</h3>
+                    <ul class="department_list">
                         <li><a href="#">Hortifrúti</a>
                             <ul>
                                 <li><a href="#">Frutas</a></li>
@@ -81,8 +78,8 @@
                             </ul>
                         </li>
                     </ul>
-                    <h3>Setor de Despensa e Bebidas</h3>
-                    <ul>
+                    <h3 class="department_title">Setor de Despensa e Bebidas</h3>
+                    <ul class="department_list">
                         <li><a href="#">Mercearia</a>
                             <ul>
                                 <li><a href="#">Arroz</a></li>
@@ -112,8 +109,8 @@
                             </ul>
                         </li>
                     </ul>
-                    <h3>Setor de Uso Pessoal e da Casa</h3>
-                    <ul>
+                    <h3 class="department_title">Setor de Uso Pessoal e da Casa</h3>
+                    <ul class="department_list">
                         <li><a href="#">Higiene e Perfumaria</a>
                             <ul>
                                 <li><a href="#">Sabonetes</a></li>
