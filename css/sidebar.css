@@ -1,0 +1,123 @@
+.main_container {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+
+  padding: 20px;
+
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.side {
+  flex: 0 0 320px;
+
+  background-color: var(--quaternary-color);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+}
+
+/*Buscar*/
+.side_search {
+  margin-bottom: 20px;
+}
+
+.side_search h2 {
+  margin-bottom: 12px;
+  color: var(--secondary-color);
+}
+
+.side_search form {
+  display: flex;
+  gap: 8px;
+}
+
+.side_search input[type="search"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  outline: none;
+}
+
+.side_search input[type="search"]:focus {
+  border-color: var(--secondary-color);
+}
+
+.side_search button {
+  background-color: var(--secondary-color);
+  color: var(--text-secondary-color);
+  border: none;
+  border-radius: 6px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.side_search button:hover {
+  background-color: #162d6b;
+}
+
+/*department_menu*/
+.department_menu {
+  clear: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+.department_menu h2 {
+  background-color: var(--secondary-color);
+  color: var(--text-secondary-color);
+  padding: 18px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+.department_menu h3 {
+  background-color: var(--terciary-color);
+  color: var(--text-secondary-color);
+  padding: 16px 18px;
+  border-radius: 8px 8px 0 0;
+  margin-top: 12px;
+  font-size: 16px;
+}
+.department_menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+.department_menu li {
+  background-color: var(--menu-dark-color);
+  padding: 9px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: 0.2s;
+}
+.department_menu li:hover {
+  background-color: #475569;
+}
+.department_menu a {
+  color: var(--text-secondary-color);
+  text-decoration: none;
+  display: block;
+}
+.department_menu li ul {
+  display: none;
+  box-sizing: border-box;
+}
+.department_menu li:hover ul {
+  display: block;
+}
+.department_menu li ul li {
+  background-color: #475569;
+  padding-left: 25px;
+}
+
+.department_menu li ul li:hover {
+  background-color: #64748b;
+}

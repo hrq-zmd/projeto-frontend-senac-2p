@@ -1,0 +1,76 @@
+/*responsividade*/
+/*tablet*/
+@media (max-width: 992px) {
+
+  .main_container {
+    flex-direction: column;
+  }
+
+  .side {
+    flex: none;
+    width: 100%;
+  }
+
+  .hero {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .hero_text {
+    max-width: 100%;
+  }
+
+  .hero_image img {
+    max-width: 400px;
+  }
+
+  .offers_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer_content {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+/*celular*/
+@media (max-width: 600px) {
+
+  .header {
+    padding: 15px 20px;
+  }
+
+  .logo img {
+    width: 140px;
+  }
+
+  .main_container {
+    padding: 12px;
+  }
+
+  .side {
+    padding: 15px;
+  }
+
+  .hero {
+    padding: 25px 20px;
+  }
+
+  .hero_text h1 {
+    font-size: 30px;
+  }
+
+  .hero_text p {
+    font-size: 16px;
+  }
+
+  .offers_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer_content {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+}

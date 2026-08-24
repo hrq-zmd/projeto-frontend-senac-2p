@@ -1,0 +1,29 @@
+:root {
+  --primary-color: #f8fafc;
+  --secondary-color: #1e3a8a;
+  --terciary-color: #d97706;
+  --quaternary-color: #dbeafe;
+
+  --text-primary-color: #1f2937;
+  --text-secondary-color: #ffffff;
+  --text-tertiary-color: #f59e0b;
+
+  --card-color: #ffffff;
+  --menu-dark-color: #334155;
+  --border-color: #d1d5db;
+}
+
+/*Reset CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Inicio Index*/
+body {
+  background-color: var(--primary-color);
+  color: var(--text-primary-color);
+   font-family: "Poppins", sans-serif;
+}
+/*Fim Index*/
