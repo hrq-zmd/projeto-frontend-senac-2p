@@ -5,13 +5,7 @@
 
   padding: 15px 40px;
 
-
-  background: linear-gradient(
-    to right,
-    #ffffff,
-    var(--secondary-color)
-  );
-
+  background: linear-gradient(to right, #ffffff, var(--secondary-color));
 
   position: relative;
   min-height: 110px;
@@ -109,7 +103,7 @@
   .header {
     padding: 15px 20px;
   }
-  
+
   .menu.ativo {
     display: flex;
   }
