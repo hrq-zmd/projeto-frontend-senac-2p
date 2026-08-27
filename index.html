@@ -2,24 +2,24 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compre em nosso supermercado</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/header.js" defer></script>
-    <script src="js/sidebar.js" defer></script>
+    <meta charset="UTF-8"> <!-- aceita caracteres especiais-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--acompanha a escala de tela do dispositivo, com escala inicial 1.0-->
+    <title>Compre em nosso supermercado</title> <!--título da página-->
+    <link rel="stylesheet" type="text/css" href="css/style.css"> <!--referencia o arquivo de estilos css utilizado-->
+    <script src="js/header.js" defer></script> <!--referencia o script js utilizado no header / defer para ser lido após a leitura de todo o restante do código html-->
+    <script src="js/sidebar.js" defer></script> <!--referencia o script js utilizado no header / defer para ser lido após a leitura de todo o restante do código html-->
 </head>
 
 
 
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="img/logo.png" alt="MeuSupermercado">
+    <header class="header"> <!--cabeçalho da página-->
+        <div class="logo"> <!--primeiro bloco à esquerda, contendo o logo do mercado-->
+            <img src="img/logo.png" alt="MeuSupermercado"> <!--endereço da imagem do logo-->
         </div>
         <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-        <nav class="menu">
-            <a href="#">Início</a>
+        <nav class="menu"> <!--bloco de links de navegação-->
+            <a href="#">Início</a> 
             <a href="#">Cadastrar</a>
             <a href="#">Produtos</a>
             <a href="#">Sobre</a>
@@ -29,27 +29,27 @@
     </header>
  
 
-    <div class="main_container">
-        <div class="side">
-            <section class="side_search">
+    <div class="main_container">  <!--bloco principal (elemento pai) do corpo da página-->
+        <div class="side"> <!--bloco da barra lateral-->
+            <section class="side_search"> <!--seção de caixa de busca-->
                 <h2>Buscar Item</h2>
-                <form>
-                    <input type="search" name="busca">
+                <form> <!--formulario-->
+                    <input type="search" name="busca"> <!--input tipo entrada/caixa de texto-->
                     <button>Buscar</button>
                 </form>
             </section>
 
-            <section class="department_menu">
+            <section class="department_menu"> <!--seção de departamentos-->
                 <h2>Departamentos</h2>
-                <nav>
-                    <h3 class="department_title">Setor de Alimentos Frescos</h3>
-                    <ul class="department_list">
+                <nav> 
+                    <h3 class="department_title">Setor de Alimentos Frescos</h3> 
+                    <ul class="department_list"> <!--lista não ordenada-->
                         <li><a href="#" class="department_subcategory">Hortifrúti</a>
-                            <ul class="department_subcategory_list">
-                                <li><a href="#">Frutas</a></li>
-                                <li><a href="#">Legumes</a></li>
-                                <li><a href="#">Verduras</a></li>
-                                <li><a href="#">Temperos Frescos</a></li>
+                            <ul class="department_subcategory_list"> <!--lista não ordenada-->
+                                <li><a href="#">Frutas</a></li> <!--item da lista -> âncora de link-->
+                                <li><a href="#">Legumes</a></li> <!--item da lista -> âncora de link-->
+                                <li><a href="#">Verduras</a></li> <!--item da lista -> âncora de link-->
+                                <li><a href="#">Temperos Frescos</a></li> <!--item da lista -> âncora de link-->
                             </ul>
                         </li>
                         <li><a href="#" class="department_subcategory">Açougue e Peixaria</a>
@@ -142,8 +142,8 @@
             </section>
         </div>
 
-        <div class="main">
-            <section class="hero">
+        <div class="main"> <!--bloco com o conteúdo principal do corpo da página-->
+            <section class="hero"> <!--seção principal do bloco principal (hero)-->
 
                 <div class="hero_text">
                     <h1>Qualidade e variedade para o seu dia a dia!</h1>
@@ -162,16 +162,16 @@
 
             </section>
 
-            <section class="offers">
+            <section class="offers"> <!--seção de ofertas-->
 
-                <div class="offers_header">
+                <div class="offers_header"> <!--cabeçalho da seção de ofertas-->
                     <h2>Ofertas em destaque</h2>
                     <a href="#">Ver todas</a>
                 </div>
 
-                <div class="offers_grid">
+                <div class="offers_grid"> <!--bloco de grade de cards de ofertas-->
 
-                    <article class="product_card">
+                    <article class="product_card"> <!--card arroz-->
                         <img src="img/arroz.png" alt="Pacote de arroz">
                         <h3>Arroz 5kg</h3>
                         <p class="old_price">R$ 32,90</p>
@@ -179,7 +179,7 @@
                         <button>Comprar</button>
                     </article>
 
-                    <article class="product_card">
+                    <article class="product_card"> <!--card cafe-->
                         <img src="img/cafe.png" alt="Pacote de café">
                         <h3>Café 500g</h3>
                         <p class="old_price">R$ 18,90</p>
@@ -187,7 +187,7 @@
                         <button>Comprar</button>
                     </article>
 
-                    <article class="product_card">
+                    <article class="product_card"> <!--card leite-->
                         <img src="img/leite.png" alt="Caixa de leite">
                         <h3>Leite 1L</h3>
                         <p class="old_price">R$ 5,49</p>
@@ -195,7 +195,7 @@
                         <button>Comprar</button>
                     </article>
 
-                    <article class="product_card">
+                    <article class="product_card"> <!--card oleo-->
                         <img src="img/oleo.png" alt="Garrafa de óleo">
                         <h3>Óleo 900ml</h3>
                         <p class="old_price">R$ 8,99</p>
@@ -211,23 +211,23 @@
         </div>
     </div>
 
-<footer class="footer">
+<footer class="footer"> <!--rodapé-->
 
-    <div class="footer_content">
+    <div class="footer_content"> <!--container principal dos elementos do rodapé-->
 
-        <div class="footer_brand">
+        <div class="footer_brand"> <!--bloco da marca-->
             <h2>Mercado Senac</h2>
             <p>Qualidade e variedade para o seu dia a dia!</p>
         </div>
 
-        <div class="footer_links">
+        <div class="footer_links"> <!--bloco de links sobre o mercado-->
             <h3>Institucional</h3>
             <a href="#">Sobre nós</a>
             <a href="#">Produtos</a>
             <a href="#">Política de Privacidade</a>
         </div>
 
-        <div class="footer_links">
+        <div class="footer_links"> <!--bloco de links de atendimento-->
             <h3>Atendimento</h3>
             <a href="#">Fale conosco</a>
             <a href="#">Perguntas frequentes</a>
@@ -236,7 +236,7 @@
 
     </div>
 
-    <div class="footer_bottom">
+    <div class="footer_bottom"> <!--container para copyright-->
         <p>&copy; 2026 Mercado Senac - Todos os direitos reservados.</p>
     </div>
 
