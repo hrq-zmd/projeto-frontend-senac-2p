@@ -1,4 +1,4 @@
-:root {
+:root { /* raiz em que são declaradas as cores e demais informações de estilo a serem utilizadas em todo o projeto */
   --primary-color: #f8fafc;
   --secondary-color: #1e3a8a;
   --terciary-color: #d97706;
@@ -20,10 +20,9 @@
   box-sizing: border-box;
 }
 
-/*Inicio Index*/
+/*Cores globais do corpo da página*/
 body {
   background-color: var(--primary-color);
   color: var(--text-primary-color);
    font-family: "Poppins", sans-serif;
 }
-/*Fim Index*/

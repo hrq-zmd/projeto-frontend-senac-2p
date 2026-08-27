@@ -2,20 +2,15 @@
   display: flex;
   flex-direction: row;
   gap: 25px;
-
   padding: 20px;
-
   max-width: 1600px;
   margin: 0 auto;
 }
 
 .side {
   flex: 0 0 320px;
-
   background-color: var(--quaternary-color);
-
   padding: 20px;
-
   border-radius: 12px;
 }
 
@@ -25,8 +20,7 @@
 }
 
 
-/*    BUSCA
-*/
+/* Busca */
 
 .side_search {
   margin-bottom: 20px;
@@ -40,18 +34,14 @@
 
 .side_search form {
   display: flex;
-
   gap: 8px;
 }
 
 .side_search input[type="search"] {
   flex: 1;
-
   padding: 10px;
-
   border: 1px solid var(--border-color);
   border-radius: 6px;
-
   outline: none;
 }
 
@@ -62,12 +52,9 @@
 .side_search button {
   background-color: var(--secondary-color);
   color: var(--text-secondary-color);
-
   border: none;
   border-radius: 6px;
-
   padding: 10px 14px;
-
   cursor: pointer;
 }
 
@@ -76,8 +63,7 @@
 }
 
 
-/*    MENU DE DEPARTAMENTOS
-*/
+/* Menu de Departamentos */
 
 .department_menu {
   margin-top: 10px;
@@ -87,59 +73,41 @@
 .department_menu h2 {
   background-color: var(--secondary-color);
   color: var(--text-secondary-color);
-
   padding: 18px;
-
   border-radius: 8px;
-
   margin-bottom: 20px;
-
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
 
-/*    TÍTULO DOS DEPARTAMENTOS
-*/
+/* Título do Departamentos */
 
 .department_title {
   background-color: var(--terciary-color);
   color: var(--text-secondary-color);
-
   padding: 16px 18px;
-
   border-radius: 8px 8px 0 0;
-
   margin-top: 12px;
-
   font-size: 16px;
-
   cursor: pointer;
 }
 
 
-/*    CONFIGURAÇÃO GERAL
-   DAS LISTAS
-*/
+/* Configuração Geral das Listas */
 
 .department_menu ul {
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 
 
-/*    LISTA PRINCIPAL
-   DE CADA DEPARTAMENTO
-*/
+/* Listas Principais dos Departamentos */
 
 .department_list {
   max-height: 0;
-
   overflow: hidden;
-
   opacity: 0;
-
   transition:
     max-height 0.4s ease,
     opacity 0.3s ease;
@@ -147,21 +115,16 @@
 
 .department_list.ativo {
   max-height: 1000px;
-
   opacity: 1;
 }
 
 
-/*    ITENS PRINCIPAIS
-*/
+/* Itens principais */
 
 .department_list > li {
   background-color: var(--menu-dark-color);
-
   padding: 9px 12px;
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-
   transition: 0.2s;
 }
 
@@ -170,38 +133,30 @@
 }
 
 
-/*    LINKS
-*/
+/* Links */
 
 .department_menu a {
   display: block;
-
   color: var(--text-secondary-color);
-
   text-decoration: none;
 }
 
 
-/*    SUBCATEGORIAS
-   Hortifrúti, Padaria etc.
-*/
+/* Subcategorias */
+/* Hortifrúti, Padaria etc. */
 
 .department_subcategory {
   cursor: pointer;
 }
 
 
-/*    LISTAS INTERNAS
-   Frutas, Legumes etc.
-*/
+/* Listas Internas */
+/* Frutas, Legumes etc.*/
 
 .department_subcategory_list {
   max-height: 0;
-
   overflow: hidden;
-
   opacity: 0;
-
   transition:
     max-height 0.35s ease,
     opacity 0.25s ease;
@@ -209,19 +164,15 @@
 
 .department_subcategory_list.ativo {
   max-height: 500px;
-
   opacity: 1;
 }
 
 
-/*    ITENS DAS SUBLISTAS
-*/
+/* Itens das Sublistas */
 
 .department_subcategory_list li {
   background-color: #475569;
-
   padding: 8px 10px 8px 25px;
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -232,8 +183,7 @@
 }
 
 
-/*    LINKS DAS SUBLISTAS
-*/
+/* Links das sublistas */
 
 .department_subcategory_list a {
   font-size: 14px;

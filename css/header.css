@@ -2,11 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 15px 40px;
-
   background: linear-gradient(to right, #ffffff, var(--secondary-color));
-
   position: relative;
   min-height: 110px;
 }
@@ -20,14 +17,10 @@
 /* Botão hambúrguer */
 .menu-toggle {
   display: block;
-
   font-size: 32px;
-
   background: none;
   border: none;
-
   color: var(--text-secondary-color);
-
   cursor: pointer;
 }
 
@@ -35,30 +28,19 @@
 .menu {
   display: flex;
   flex-direction: column;
-
   position: absolute;
   top: 100%;
   right: 20px;
-
   width: 220px;
-
   background-color: var(--secondary-color);
-
   padding: 15px;
-
   border-radius: 0 0 8px 8px;
-
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
-
   z-index: 1000;
-
   opacity: 0;
   visibility: hidden;
-
   transform: translateY(-10px);
-
   pointer-events: none;
-
   transition:
     opacity 0.3s ease,
     transform 0.3s ease,
@@ -68,19 +50,14 @@
 .menu.ativo {
   opacity: 1;
   visibility: visible;
-
   transform: translateY(0);
-
   pointer-events: auto;
 }
 
 .menu a {
   color: var(--text-secondary-color);
-
   text-decoration: none;
-
   padding: 10px;
-
   border-radius: 5px;
 }
 
@@ -89,14 +66,10 @@
 }
 .menu-toggle {
   display: block;
-
   font-size: 32px;
-
   background: none;
   border: none;
-
   color: var(--text-secondary-color);
-
   cursor: pointer;
 }
 @media (max-width: 768px) {

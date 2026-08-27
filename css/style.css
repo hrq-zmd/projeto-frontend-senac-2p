@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'); /*importa fonte Poppins do Google fonts */
 
-@import url("base.css");
-@import url("header.css");
-@import url("sidebar.css");
-@import url("hero.css");
-@import url("offers.css");
-@import url("footer.css");
-@import url("responsive.css");
+@import url("base.css"); /* importa página base.css */
+@import url("header.css"); /* importa página header.css */
+@import url("sidebar.css"); /* importa página sidebar.css */
+@import url("hero.css"); /* importa página hero.css */
+@import url("offers.css"); /* importa página offers.css */
+@import url("footer.css"); /* importa página footer.css */
+@import url("responsive.css"); /* importa página responsive.css */
 
 
 
