@@ -58,3 +58,54 @@
   max-width: 520px;
   height: auto;
 }
+
+/* Apresentação de slides */
+
+.slideshow_container {
+  max-width: 1000px;
+  position: relative;
+  margin:auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.previous_arrow, .next_arrow {
+  background: rgba (0,0,0,0.4);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  color: var(--text-secondary-color));
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s ease;
+  user-select: none;
+  z-index: 10;
+}
+
+.previous_arrow { left: 0; }
+.next { right: 0; }
+
+.fade {
+  animation-name: fadeEffect;
+  animation-duration: 0.8s;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0.4;}
+  to { opacity: 1;}
+}
+
+

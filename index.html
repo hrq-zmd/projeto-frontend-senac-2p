@@ -144,8 +144,9 @@
 
         <div class="main"> <!--bloco com o conteúdo principal do corpo da página-->
             <section class="hero"> <!--seção principal do bloco principal (hero)-->
-
+                    
                 <div class="hero_text">
+                    
                     <h1>Qualidade e variedade para o seu dia a dia!</h1>
 
                     <p>
@@ -157,7 +158,24 @@
                 </div>
 
                 <div class="hero_image">
-                    <img src="img/banner-mercado.png" alt="Produtos de supermercado">
+                    <section class="slideshow_container" aria-label="Slides de apresentação">
+                        <article class="slide_fade">
+                            <img src="img/slide-1.png" alt="Produtos de supermercado">
+                        </article>
+
+                        <article class="slide_fade">
+                            <img src="img/slide-2.png" alt="Produtos de supermercado">
+                        </article>
+
+                        <article class="slide_fade">
+                            <img src="img/slide-3.png" alt="Produtos de supermercado">
+                        </article>
+
+                        <button class="previous_arrow" onclick="changeSlide(-1)" aria-label="Slide anterior">&#10094;</button>
+
+                        <button class="next_arrow" onclick="changeSlide(1)" aria-label="Slide posterior">&#10095;</button>
+                    
+                    </section>
                 </div>
 
             </section>
