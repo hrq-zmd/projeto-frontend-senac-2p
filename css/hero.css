@@ -79,7 +79,7 @@
 }
 
 .previous_arrow, .next_arrow {
-  background: rgba (0,0,0,0.4);
+  background: rgba(0,0,0,0.4);
   border: none;
   outline: none;
   cursor: pointer;
@@ -87,7 +87,7 @@
   top: 50%;
   transform: translateY(-50%);
   padding: 16px;
-  color: var(--text-secondary-color));
+  color: var(--text-secondary-color);
   font-weight: bold;
   font-size: 18px;
   transition: 0.3s ease;
@@ -96,7 +96,7 @@
 }
 
 .previous_arrow { left: 0; }
-.next { right: 0; }
+.next_arrow { right: 0; }
 
 .fade {
   animation-name: fadeEffect;
