@@ -24,23 +24,19 @@
   flex-direction: row;
   justify-content: center;
   gap: 10px;
-
   position: static;
-
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-
   transform: none;
 }
 
 .menu a {
-  color: var(--text-secondary-color);
+  color: var(--text-primary-color);
+  font-size: x-large;
   text-decoration: none;
-
   padding: 10px;
   border-radius: 5px;
-
   transition: 0.2s;
 }
 
