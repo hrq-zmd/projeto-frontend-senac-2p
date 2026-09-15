@@ -3,4 +3,9 @@ const menu = document.querySelector(".menu"); // criação da constante menu = m
 
 toggleBtn.addEventListener("click", () => { //aplica o método addEventListener, composto de uma arrow function, tendo "click" como parâmetro, de modo que, ao ser chamada, a função acessa a classe e muda o seu valor para "ativo"
   menu.classList.toggle("ativo");
+
+  const menuAberto = menu.classList.contains("ativo");
+
+  toggleBtn.setAttribute("aria-expanded", menuAberto);
+
 });

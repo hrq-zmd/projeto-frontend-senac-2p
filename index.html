@@ -18,7 +18,11 @@
         <div class="logo"> <!--primeiro bloco à esquerda, contendo o logo do mercado-->
             <img src="img/logo.png" alt="MeuSupermercado"> <!--endereço da imagem do logo-->
         </div>
-        <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+        <button class="menu-toggle" 
+            aria-label="Abrir menu"
+            aria-expanded="false">
+            &#9776;
+        </button>
         <nav class="menu"> <!--bloco de links de navegação-->
             <a href="#">Início</a> 
             <a href="#">Cadastrar</a>
@@ -27,6 +31,15 @@
             <a href="#">Contato</a>
             <a href="#">Ajuda</a>
         </nav>
+
+        <div class="cart">
+            <div class="cart_icon_settings">
+                <a href="#">
+                    <img src="img/white cart.png" alt="carrinho de compras">
+                    <span class="cart_value">730</span>
+                </a>
+            </div>
+        </div>
     </header>
  
 
