@@ -1,6 +1,7 @@
 const departmentTitles = document.querySelectorAll(".department_title"); // criação da constante departmentTitles = aplicação do método querySelectorAll, para selecionar todos os parâmetros iguais (true) à classe .department_title (CSS)
 
-departmentTitles.forEach((title) => { // método forEach aplicado ao vetor departmentTitles em que, através de uma arrow function, para cada parâmetro title se aplica o método addEventListener 
+departmentTitles.forEach((title) => {
+  // método forEach aplicado ao vetor departmentTitles em que, através de uma arrow function, para cada parâmetro title se aplica o método addEventListener
   title.addEventListener("click", () => {
     const departmentList = title.nextElementSibling; // ao receber o evento "click", à constante departmentList é atribuida a propriedade nextElementSibling (próximo elemento irmão)
 

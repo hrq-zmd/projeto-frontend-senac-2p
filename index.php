@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+$carrinho = $_SESSION["carrinho"] ?? [];
+$cart_count = array_sum($carrinho);
+
+?>
+
 <!doctype html>
 <html lang="pt-BR">
   <head>
@@ -43,7 +51,7 @@
         <div class="cart_icon_settings">
           <a href="#">
             <img src="img/white cart.png" alt="carrinho de compras" />
-            <span class="cart_value">730</span>
+            <span class="cart_value"><?= $cart_count ?></span>
           </a>
         </div>
       </div>
