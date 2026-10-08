@@ -5,6 +5,7 @@ session_start();
 require_once __DIR__ . "/inc/produtos.php";
 
 $carrinho = $_SESSION["carrinho"] ?? [];
+$total = 0;
 
 ?>
 
@@ -21,16 +22,42 @@ $carrinho = $_SESSION["carrinho"] ?? [];
 <?php foreach ($carrinho as $id => $quantidade): ?>
 
     <?php if (isset($produtos[$id])): ?>
+        <?php
+    $preco = $produtos[$id]["preco"];
 
-        <p>
-            Produto:
-            <?= htmlspecialchars($produtos[$id]["nome"]) ?>
-        </p>
+    $subtotal = $preco * $quantidade;
 
-        <p>
-            Quantidade:
-            <?= (int) $quantidade ?>
-        </p>
+    $total += $subtotal;
+?>
+
+        <div>
+            <h3>
+                <?= htmlspecialchars($produtos[$id]["nome"]) ?>
+            </h3>
+
+            <p>
+                Preço: R$
+                <?= number_format($produtos[$id]["preco"], 2, ",", ".") ?>
+            </p>
+
+            <p>Quantidade: <?= $quantidade ?></p>
+
+            <form action="atualizar.php" method="POST">
+
+                <input type="hidden" name="id" value="<?= $id ?>">
+
+                <button type="submit" name="acao" value="diminuir">
+                    −
+                </button>
+
+                <button type="submit" name="acao" value="aumentar">
+                    +
+                </button>
+
+            </form>
+        </div>
+
+        <hr>
 
     <?php endif; ?>
 

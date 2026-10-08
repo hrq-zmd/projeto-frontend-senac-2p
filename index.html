@@ -1,285 +1,346 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- aceita caracteres especiais-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--acompanha a escala de tela do dispositivo, com escala inicial 1.0-->
+    <title>Compre em nosso supermercado</title>
+    <!--título da página-->
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!--referencia o arquivo de estilos css utilizado-->
+    <script src="js/header.js" defer></script>
+    <!--referencia o script js utilizado no header / defer para ser lido após a leitura de todo o restante do código html-->
+    <script src="js/sidebar.js" defer></script>
+    <!--referencia o script js utilizado no sidebar / defer para ser lido após a leitura de todo o restante do código html-->
+    <script src="js/hero.js" defer></script>
+    <!--referencia o script js utilizado no hero / defer para ser lido após a leitura de todo o restante do código html-->
+  </head>
 
-<head>
-    <meta charset="UTF-8"> <!-- aceita caracteres especiais-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--acompanha a escala de tela do dispositivo, com escala inicial 1.0-->
-    <title>Compre em nosso supermercado</title> <!--título da página-->
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="css/style.css"> <!--referencia o arquivo de estilos css utilizado-->
-    <script src="js/header.js" defer></script> <!--referencia o script js utilizado no header / defer para ser lido após a leitura de todo o restante do código html-->
-    <script src="js/sidebar.js" defer></script> <!--referencia o script js utilizado no sidebar / defer para ser lido após a leitura de todo o restante do código html-->
-    <script src="js/hero.js" defer></script> <!--referencia o script js utilizado no hero / defer para ser lido após a leitura de todo o restante do código html-->
-</head>
+  <body>
+    <header class="header">
+      <!--cabeçalho da página-->
+      <div class="logo">
+        <!--primeiro bloco à esquerda, contendo o logo do mercado-->
+        <img src="img/logo.png" alt="MeuSupermercado" />
+        <!--endereço da imagem do logo-->
+      </div>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        &#9776;
+      </button>
+      <nav class="menu">
+        <!--bloco de links de navegação-->
+        <a href="#">Início</a>
+        <a href="#">Cadastrar</a>
+        <a href="#">Produtos</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+        <a href="#">Ajuda</a>
+      </nav>
 
-
-
-<body>
-    <header class="header"> <!--cabeçalho da página-->
-        <div class="logo"> <!--primeiro bloco à esquerda, contendo o logo do mercado-->
-            <img src="img/logo.png" alt="MeuSupermercado"> <!--endereço da imagem do logo-->
+      <div class="cart">
+        <div class="cart_icon_settings">
+          <a href="#">
+            <img src="img/white cart.png" alt="carrinho de compras" />
+            <span class="cart_value">730</span>
+          </a>
         </div>
-        <button class="menu-toggle" 
-            aria-label="Abrir menu"
-            aria-expanded="false">
-            &#9776;
-        </button>
-        <nav class="menu"> <!--bloco de links de navegação-->
-            <a href="#">Início</a> 
-            <a href="#">Cadastrar</a>
-            <a href="#">Produtos</a>
-            <a href="#">Sobre</a>
-            <a href="#">Contato</a>
-            <a href="#">Ajuda</a>
-        </nav>
-
-        <div class="cart">
-            <div class="cart_icon_settings">
-                <a href="#">
-                    <img src="img/white cart.png" alt="carrinho de compras">
-                    <span class="cart_value">730</span>
-                </a>
-            </div>
-        </div>
+      </div>
     </header>
- 
 
-    <div class="main_container">  <!--bloco principal (elemento pai) do corpo da página-->
-        <div class="side"> <!--bloco da barra lateral-->
-            <section class="side_search"> <!--seção de caixa de busca-->
-                <h2>Buscar Item</h2>
-                <form> <!--formulario-->
-                    <input type="search" name="busca"> <!--input tipo entrada/caixa de texto-->
-                    <button>Buscar</button>
-                </form>
+    <div class="main_container">
+      <!--bloco principal (elemento pai) do corpo da página-->
+      <div class="side">
+        <!--bloco da barra lateral-->
+        <section class="side_search">
+          <!--seção de caixa de busca-->
+          <h2>Buscar Item</h2>
+          <form>
+            <!--formulario-->
+            <input type="search" name="busca" />
+            <!--input tipo entrada/caixa de texto-->
+            <button>Buscar</button>
+          </form>
+        </section>
+
+        <section class="department_menu">
+          <!--seção de departamentos-->
+          <h2>Departamentos</h2>
+          <nav>
+            <h3 class="department_title">Setor de Alimentos Frescos</h3>
+            <ul class="department_list">
+              <!--lista não ordenada-->
+              <li>
+                <a href="#" class="department_subcategory">Hortifrúti</a>
+                <ul class="department_subcategory_list">
+                  <!--lista não ordenada-->
+                  <li><a href="#">Frutas</a></li>
+                  <!--item da lista -> âncora de link-->
+                  <li><a href="#">Legumes</a></li>
+                  <!--item da lista -> âncora de link-->
+                  <li><a href="#">Verduras</a></li>
+                  <!--item da lista -> âncora de link-->
+                  <li><a href="#">Temperos Frescos</a></li>
+                  <!--item da lista -> âncora de link-->
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="department_subcategory"
+                  >Açougue e Peixaria</a
+                >
+                <ul class="department_subcategory_list">
+                  <li><a href="#">Carnes Vermelha</a></li>
+                  <li><a href="#">Aves</a></li>
+                  <li><a href="#">Peixes</a></li>
+                  <li><a href="#">Frutos do Mar</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="department_subcategory">Padaria</a>
+                <ul class="department_subcategory_list">
+                  <li><a href="#">Pães</a></li>
+                  <li><a href="#">Bolos</a></li>
+                  <li><a href="#">Salgados</a></li>
+                  <li><a href="#">Doces</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="department_subcategory"
+                  >Frios e Laticínios</a
+                >
+                <ul class="department_subcategory_list">
+                  <li><a href="#">Queijo</a></li>
+                  <li><a href="#">Presunto</a></li>
+                  <li><a href="#">Iogurte</a></li>
+                  <li><a href="#">Manteiga</a></li>
+                  <li><a href="#">Leite</a></li>
+                </ul>
+              </li>
+            </ul>
+            <h3 class="department_title">Setor de Despensa e Bebidas</h3>
+            <ul class="department_list">
+              <li>
+                <a href="#" class="department_subcategory">Mercearia</a>
+                <ul class="department_subcategory_list">
+                  <li><a href="#">Arroz</a></li>
+                  <li><a href="#">Feijão</a></li>
+                  <li><a href="#">Massas</a></li>
+                  <li><a href="#">Óleos</a></li>
+                  <li><a href="#">Açucar</a></li>
+                  <li><a href="#">Café</a></li>
+                  <li><a href="#">Enlatados</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="department_subcategory">Bebidas</a>
+                <ul class="department_subcategory_list">
+                  <li><a href="#">Águas</a></li>
+                  <li><a href="#">Sucos</a></li>
+                  <li><a href="#">Refrigerantes</a></li>
+                  <li><a href="#">Cervejas</a></li>
+                  <li><a href="#">Vinhos</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="department_subcategory">Congelados</a>
+                <ul class="department_subcategory_list">
+                  <li><a href="#">Pratos prontos</a></li>
+                  <li><a href="#">Pizzas</a></li>
+                  <li><a href="#">Pão de queijo</a></li>
+                  <li><a href="#">Vegetais</a></li>
+                </ul>
+              </li>
+            </ul>
+            <h3 class="department_title">Setor de Uso Pessoal e da Casa</h3>
+            <ul class="department_list">
+              <li>
+                <a href="#" class="department_subcategory"
+                  >Higiene e Perfumaria</a
+                >
+                <ul class="department_subcategory_list">
+                  <li><a href="#">Sabonetes</a></li>
+                  <li><a href="#">Shampoos</a></li>
+                  <li><a href="#">Cremes</a></li>
+                  <li><a href="#">Desodorante</a></li>
+                  <li><a href="#">Papel higiênico</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="department_subcategory">Limpeza</a>
+                <ul class="department_subcategory_list">
+                  <li><a href="#">Sabão em pó</a></li>
+                  <li><a href="#">Desinfetante</a></li>
+                  <li><a href="#">Amaciantes</a></li>
+                  <li><a href="#">Esponjas</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="department_subcategory"
+                  >Utilidades e Pet Shop</a
+                >
+                <ul class="department_subcategory_list">
+                  <li><a href="#">Ração</a></li>
+                  <li><a href="#">Saches</a></li>
+                  <li><a href="#">Brinquedos</a></li>
+                  <li><a href="#">Petiscos</a></li>
+                  <li><a href="#">Sacos de lixo</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+
+      <div class="main">
+        <!--bloco com o conteúdo principal do corpo da página-->
+        <section class="hero">
+          <!--seção principal do bloco principal (hero)-->
+
+          <div class="hero_text">
+            <h1>Qualidade e variedade para o seu dia a dia!</h1>
+
+            <p>
+              Tudo o que você precisa em um só lugar, com praticidade e bons
+              preços.
+            </p>
+
+            <a href="#">Ver produtos</a>
+          </div>
+
+          <div class="hero_image">
+            <section
+              class="slideshow_container"
+              aria-label="Slides de apresentação"
+            >
+              <article class="slide fade">
+                <img src="img/slide-1.png" alt="Produtos de supermercado" />
+              </article>
+
+              <article class="slide fade">
+                <img src="img/slide-2.png" alt="Produtos de supermercado" />
+              </article>
+
+              <article class="slide fade">
+                <img src="img/slide-3.png" alt="Produtos de supermercado" />
+              </article>
+
+              <button
+                class="previous_arrow"
+                onclick="changeSlide(-1)"
+                aria-label="Slide anterior"
+              >
+                &#10094;
+              </button>
+
+              <button
+                class="next_arrow"
+                onclick="changeSlide(1)"
+                aria-label="Slide posterior"
+              >
+                &#10095;
+              </button>
             </section>
+          </div>
+        </section>
 
-            <section class="department_menu"> <!--seção de departamentos-->
-                <h2>Departamentos</h2>
-                <nav> 
-                    <h3 class="department_title">Setor de Alimentos Frescos</h3> 
-                    <ul class="department_list"> <!--lista não ordenada-->
-                        <li><a href="#" class="department_subcategory">Hortifrúti</a>
-                            <ul class="department_subcategory_list"> <!--lista não ordenada-->
-                                <li><a href="#">Frutas</a></li> <!--item da lista -> âncora de link-->
-                                <li><a href="#">Legumes</a></li> <!--item da lista -> âncora de link-->
-                                <li><a href="#">Verduras</a></li> <!--item da lista -> âncora de link-->
-                                <li><a href="#">Temperos Frescos</a></li> <!--item da lista -> âncora de link-->
-                            </ul>
-                        </li>
-                        <li><a href="#" class="department_subcategory">Açougue e Peixaria</a>
-                            <ul class="department_subcategory_list">
-                                <li><a href="#">Carnes Vermelha</a></li>
-                                <li><a href="#">Aves</a></li>
-                                <li><a href="#">Peixes</a></li>
-                                <li><a href="#">Frutos do Mar</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="department_subcategory">Padaria</a>
-                            <ul class="department_subcategory_list">
-                                <li><a href="#">Pães</a></li>
-                                <li><a href="#">Bolos</a></li>
-                                <li><a href="#">Salgados</a></li>
-                                <li><a href="#">Doces</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="department_subcategory">Frios e Laticínios</a>
-                            <ul class="department_subcategory_list">
-                                <li><a href="#">Queijo</a></li>
-                                <li><a href="#">Presunto</a></li>
-                                <li><a href="#">Iogurte</a></li>
-                                <li><a href="#">Manteiga</a></li>
-                                <li><a href="#">Leite</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <h3 class="department_title">Setor de Despensa e Bebidas</h3>
-                    <ul class="department_list">
-                        <li><a href="#" class="department_subcategory">Mercearia</a>
-                            <ul class="department_subcategory_list">
-                                <li><a href="#">Arroz</a></li>
-                                <li><a href="#">Feijão</a></li>
-                                <li><a href="#">Massas</a></li>
-                                <li><a href="#">Óleos</a></li>
-                                <li><a href="#">Açucar</a></li>
-                                <li><a href="#">Café</a></li>
-                                <li><a href="#">Enlatados</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="department_subcategory">Bebidas</a>
-                            <ul class="department_subcategory_list">
-                                <li><a href="#">Águas</a></li>
-                                <li><a href="#">Sucos</a></li>
-                                <li><a href="#">Refrigerantes</a></li>
-                                <li><a href="#">Cervejas</a></li>
-                                <li><a href="#">Vinhos</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="department_subcategory">Congelados</a>
-                            <ul class="department_subcategory_list">
-                                <li><a href="#">Pratos prontos</a></li>
-                                <li><a href="#">Pizzas</a></li>
-                                <li><a href="#">Pão de queijo</a></li>
-                                <li><a href="#">Vegetais</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <h3 class="department_title">Setor de Uso Pessoal e da Casa</h3>
-                    <ul class="department_list">
-                        <li><a href="#" class="department_subcategory">Higiene e Perfumaria</a>
-                            <ul class="department_subcategory_list">
-                                <li><a href="#">Sabonetes</a></li>
-                                <li><a href="#">Shampoos</a></li>
-                                <li><a href="#">Cremes</a></li>
-                                <li><a href="#">Desodorante</a></li>
-                                <li><a href="#">Papel higiênico</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="department_subcategory">Limpeza</a>
-                            <ul class="department_subcategory_list">
-                                <li><a href="#">Sabão em pó</a></li>
-                                <li><a href="#">Desinfetante</a></li>
-                                <li><a href="#">Amaciantes</a></li>
-                                <li><a href="#">Esponjas</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="department_subcategory">Utilidades e Pet Shop</a>
-                            <ul class="department_subcategory_list">
-                                <li><a href="#">Ração</a></li>
-                                <li><a href="#">Saches</a></li>
-                                <li><a href="#">Brinquedos</a></li>
-                                <li><a href="#">Petiscos</a></li>
-                                <li><a href="#">Sacos de lixo</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </section>
-        </div>
+        <section class="offers">
+          <!--seção de ofertas-->
 
-        <div class="main"> <!--bloco com o conteúdo principal do corpo da página-->
-            <section class="hero"> <!--seção principal do bloco principal (hero)-->
-                    
-                <div class="hero_text">
-                    
-                    <h1>Qualidade e variedade para o seu dia a dia!</h1>
+          <div class="offers_header">
+            <!--cabeçalho da seção de ofertas-->
+            <h2>Ofertas em destaque</h2>
+            <a href="#">Ver todas</a>
+          </div>
 
-                    <p>
-                        Tudo o que você precisa em um só lugar,
-                        com praticidade e bons preços.
-                    </p>
+          <div class="offers_grid">
+            <!--bloco de grade de cards de ofertas-->
 
-                    <a href="#">Ver produtos</a>
-                </div>
+            <article class="product_card">
+              <!--card arroz-->
+              <img src="img/arroz.png" alt="Pacote de arroz" />
+              <h3>Arroz 5kg</h3>
+              <p class="old_price">R$ 32,90</p>
+              <p class="price">R$ 27,90</p>
+              <form action="adicionar.php" method="POST">
+                <input type="hidden" name="id" value="1" />
+                <button type="submit" class="buy_button">Comprar</button>
+              </form>
+            </article>
 
-                <div class="hero_image">
-                    <section class="slideshow_container" aria-label="Slides de apresentação">
-                        <article class="slide fade">
-                            <img src="img/slide-1.png" alt="Produtos de supermercado">
-                        </article>
+            <article class="product_card">
+              <!--card cafe-->
+              <img src="img/cafe.png" alt="Pacote de café" />
+              <h3>Café 500g</h3>
+              <p class="old_price">R$ 18,90</p>
+              <p class="price">R$ 15,90</p>
+              <form action="adicionar.php" method="POST">
+                <input type="hidden" name="id" value="2" />
+                <button type="submit" class="buy_button">Comprar</button>
+              </form>
+            </article>
 
-                        <article class="slide fade">
-                            <img src="img/slide-2.png" alt="Produtos de supermercado">
-                        </article>
+            <article class="product_card">
+              <!--card leite-->
+              <img src="img/leite.png" alt="Caixa de leite" />
+              <h3>Leite 1L</h3>
+              <p class="old_price">R$ 5,49</p>
+              <p class="price">R$ 4,79</p>
+              <form action="adicionar.php" method="POST">
+                <input type="hidden" name="id" value="3" />
+                <button type="submit" class="buy_button">Comprar</button>
+              </form>
+            </article>
 
-                        <article class="slide fade">
-                            <img src="img/slide-3.png" alt="Produtos de supermercado">
-                        </article>
-
-                        <button class="previous_arrow" onclick="changeSlide(-1)" aria-label="Slide anterior">&#10094;</button>
-
-                        <button class="next_arrow" onclick="changeSlide(1)" aria-label="Slide posterior">&#10095;</button>
-                    
-                    </section>
-                </div>
-
-            </section>
-
-            <section class="offers"> <!--seção de ofertas-->
-
-                <div class="offers_header"> <!--cabeçalho da seção de ofertas-->
-                    <h2>Ofertas em destaque</h2>
-                    <a href="#">Ver todas</a>
-                </div>
-
-                <div class="offers_grid"> <!--bloco de grade de cards de ofertas-->
-
-                    <article class="product_card"> <!--card arroz-->
-                        <img src="img/arroz.png" alt="Pacote de arroz">
-                        <h3>Arroz 5kg</h3>
-                        <p class="old_price">R$ 32,90</p>
-                        <p class="price">R$ 27,90</p>
-                        <form action="adicionar.php" method="POST">
-                            <input type="hidden" name="id" value="1">
-                                <button type="submit" class="buy_button">
-                                Comprar
-                                </button>
-                        </form>
-                    </article>
-
-                    <article class="product_card"> <!--card cafe-->
-                        <img src="img/cafe.png" alt="Pacote de café">
-                        <h3>Café 500g</h3>
-                        <p class="old_price">R$ 18,90</p>
-                        <p class="price">R$ 15,90</p>
-                        <button>Comprar</button>
-                    </article>
-
-                    <article class="product_card"> <!--card leite-->
-                        <img src="img/leite.png" alt="Caixa de leite">
-                        <h3>Leite 1L</h3>
-                        <p class="old_price">R$ 5,49</p>
-                        <p class="price">R$ 4,79</p>
-                        <button>Comprar</button>
-                    </article>
-
-                    <article class="product_card"> <!--card oleo-->
-                        <img src="img/oleo.png" alt="Garrafa de óleo">
-                        <h3>Óleo 900ml</h3>
-                        <p class="old_price">R$ 8,99</p>
-                        <p class="price">R$ 7,49</p>
-                        <button>Comprar</button>
-                    </article>
-
-                </div>
-
-            </section>
-
-
-        </div>
+            <article class="product_card">
+              <!--card oleo-->
+              <img src="img/oleo.png" alt="Garrafa de óleo" />
+              <h3>Óleo 900ml</h3>
+              <p class="old_price">R$ 8,99</p>
+              <p class="price">R$ 7,49</p>
+              <form action="adicionar.php" method="POST">
+                <input type="hidden" name="id" value="4" />
+                <button type="submit" class="buy_button">Comprar</button>
+              </form>
+            </article>
+          </div>
+        </section>
+      </div>
     </div>
 
-<footer class="footer"> <!--rodapé-->
+    <footer class="footer">
+      <!--rodapé-->
 
-    <div class="footer_content"> <!--container principal dos elementos do rodapé-->
+      <div class="footer_content">
+        <!--container principal dos elementos do rodapé-->
 
-        <div class="footer_brand"> <!--bloco da marca-->
-            <h2>Mercado Senac</h2>
-            <p>Qualidade e variedade para o seu dia a dia!</p>
+        <div class="footer_brand">
+          <!--bloco da marca-->
+          <h2>Mercado Senac</h2>
+          <p>Qualidade e variedade para o seu dia a dia!</p>
         </div>
 
-        <div class="footer_links"> <!--bloco de links sobre o mercado-->
-            <h3>Institucional</h3>
-            <a href="#">Sobre nós</a>
-            <a href="#">Produtos</a>
-            <a href="#">Política de Privacidade</a>
+        <div class="footer_links">
+          <!--bloco de links sobre o mercado-->
+          <h3>Institucional</h3>
+          <a href="#">Sobre nós</a>
+          <a href="#">Produtos</a>
+          <a href="#">Política de Privacidade</a>
         </div>
 
-        <div class="footer_links"> <!--bloco de links de atendimento-->
-            <h3>Atendimento</h3>
-            <a href="#">Fale conosco</a>
-            <a href="#">Perguntas frequentes</a>
-            <a href="#">Trocas e devoluções</a>
+        <div class="footer_links">
+          <!--bloco de links de atendimento-->
+          <h3>Atendimento</h3>
+          <a href="#">Fale conosco</a>
+          <a href="#">Perguntas frequentes</a>
+          <a href="#">Trocas e devoluções</a>
         </div>
+      </div>
 
-    </div>
-
-    <div class="footer_bottom"> <!--container para copyright-->
+      <div class="footer_bottom">
+        <!--container para copyright-->
         <p>&copy; 2026 Mercado Senac - Todos os direitos reservados.</p>
-    </div>
-
-</footer>
-
-</body>
-
+      </div>
+    </footer>
+  </body>
 </html>
