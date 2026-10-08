@@ -209,7 +209,12 @@
                         <h3>Arroz 5kg</h3>
                         <p class="old_price">R$ 32,90</p>
                         <p class="price">R$ 27,90</p>
-                        <button>Comprar</button>
+                        <form action="adicionar.php" method="POST">
+                            <input type="hidden" name="id" value="1">
+                                <button type="submit" class="buy_button">
+                                Comprar
+                                </button>
+                        </form>
                     </article>
 
                     <article class="product_card"> <!--card cafe-->
