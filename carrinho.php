@@ -5,6 +5,7 @@ session_start();
 require_once __DIR__ . "/inc/produtos.php";
 
 $carrinho = $_SESSION["carrinho"] ?? [];
+$cart_count = array_sum($carrinho);
 $total = 0;
 
 ?>
@@ -19,30 +20,38 @@ $total = 0;
     <title>Meu Carrinho | Mercado Senac</title>
 
     <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
 
-    <!-- Custom CSS -->
+    <!-- Estilos gerais -->
+    <link rel="stylesheet" href="css/base.css">
+
+    <!-- Estilos do cabeçalho -->
+    <link rel="stylesheet" href="css/header.css">
+
+    <!-- Estilos responsivos -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Estilos do carrinho -->
     <link rel="stylesheet" href="css/carrinho.css">
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header class="senac_header">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="index.html" class="senac_brand">Mercado Senac</a>
-            <span>Meu Carrinho</span>
-        </div>
-    </header>
+    <!-- Cabeçalho compartilhado -->
+    <?php require __DIR__ . "/inc/header.inc.php"; ?>
 
-    <!-- Main content -->
+    <!-- Conteúdo principal -->
     <main class="container my-5">
+
         <h1 class="cart_title mb-2">Meu Carrinho</h1>
         <p class="text-secondary mb-4">Confira os produtos selecionados para sua compra.</p>
 
         <div class="row g-4">
 
-            <!-- Products column -->
+            <!-- Coluna de Produtos -->
             <div class="col-12 col-lg-8">
                 <section class="cart_panel">
                     <h2 class="h5 mb-3">Produtos selecionados</h2>

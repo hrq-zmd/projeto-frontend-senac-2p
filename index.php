@@ -27,35 +27,8 @@ $cart_count = array_sum($carrinho);
   </head>
 
   <body>
-    <header class="header">
-      <!--cabeçalho da página-->
-      <div class="logo">
-        <!--primeiro bloco à esquerda, contendo o logo do mercado-->
-        <img src="img/logo.png" alt="MeuSupermercado" />
-        <!--endereço da imagem do logo-->
-      </div>
-      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
-        &#9776;
-      </button>
-      <nav class="menu">
-        <!--bloco de links de navegação-->
-        <a href="#">Início</a>
-        <a href="#">Cadastrar</a>
-        <a href="#">Produtos</a>
-        <a href="#">Sobre</a>
-        <a href="#">Contato</a>
-        <a href="#">Ajuda</a>
-      </nav>
-
-      <div class="cart">
-        <div class="cart_icon_settings">
-          <a href="#">
-            <img src="img/white cart.png" alt="carrinho de compras" />
-            <span class="cart_value"><?= $cart_count ?></span>
-          </a>
-        </div>
-      </div>
-    </header>
+    
+    <?php require __DIR__ . "/inc/header.inc.php"; ?>
 
     <div class="main_container">
       <!--bloco principal (elemento pai) do corpo da página-->
