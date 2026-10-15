@@ -1,3 +1,18 @@
+:root { /* raiz em que são declaradas as cores (variáveis) e demais informações de estilo a serem utilizadas em todo o projeto */
+  --primary-color: #f8fafc;
+  --secondary-color: #1e3a8a;
+  --terciary-color: #d97706;
+  --quaternary-color: #dbeafe;
+
+  --text-primary-color: #1f2937;
+  --text-secondary-color: #ffffff;
+  --text-tertiary-color: #f59e0b;
+
+  --card-color: #ffffff;
+  --menu-dark-color: #334155;
+  --border-color: #d1d5db;
+}
+
 /*ofertas*/
 .offers {
   margin-top: 30px;
