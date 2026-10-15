@@ -291,3 +291,15 @@ body {
     font-size: 1.6rem;
   }
 }
+
+/* Ajuste do rodapé compartilhado */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart_container {
+  flex: 1;
+}

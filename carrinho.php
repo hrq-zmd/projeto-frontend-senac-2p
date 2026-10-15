@@ -29,6 +29,7 @@ foreach ($carrinho as $id => $quantidade) {
 
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/carrinho.css">
     
