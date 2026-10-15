@@ -1,4 +1,3 @@
-
 <?php
 
 session_start();
@@ -32,6 +31,9 @@ foreach ($carrinho as $id => $quantidade) {
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/carrinho.css">
+    
+    <!-- JavaScript do menu responsivo -->
+    <script src="js/header.js" defer></script>
 </head>
 
 <body>
@@ -249,5 +251,7 @@ foreach ($carrinho as $id => $quantidade) {
 
     </main>
 
+<!-- Footer compartilhado -->
+    <?php require __DIR__ . "/inc/footer.inc.php"; ?>
 </body>
 </html>

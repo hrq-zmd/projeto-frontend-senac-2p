@@ -1,21 +1,8 @@
 /*responsividade*/
-:root { /* raiz em que são declaradas as cores (variáveis) e demais informações de estilo a serem utilizadas em todo o projeto */
-  --primary-color: #f8fafc;
-  --secondary-color: #1e3a8a;
-  --terciary-color: #d97706;
-  --quaternary-color: #dbeafe;
-
-  --text-primary-color: #1f2937;
-  --text-secondary-color: #ffffff;
-  --text-tertiary-color: #f59e0b;
-
-  --card-color: #ffffff;
-  --menu-dark-color: #334155;
-  --border-color: #d1d5db;
-}
 
 /*tablet*/
-@media (max-width: 992px) { /* parametro de limite de largura*/
+@media (max-width: 992px) {
+  /* parametro de limite de largura*/
 
   .main_container {
     flex-direction: column;
@@ -51,7 +38,6 @@
 
 /*celular*/
 @media (max-width: 600px) {
-
   .header {
     padding: 15px 20px;
   }
@@ -87,5 +73,41 @@
   .footer_content {
     flex-direction: column;
     padding: 30px 20px;
+  }
+}
+
+/* Menu de navegação celular */
+
+@media (max-width: 600px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #004b8d;
+    padding: 20px;
+    gap: 15px;
+    z-index: 1000;
+  }
+
+  .menu.active {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: none;
+  }
+
+  .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+
+  .menu a:hover {
+    background-color: #f7941d;
+    border-radius: 6px;
   }
 }
